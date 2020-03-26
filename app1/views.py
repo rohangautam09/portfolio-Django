@@ -11,6 +11,8 @@ def portfolio(request):
 def contact(request):
     return render(request,'app1/contact.html')
 
+
+
 def success(request):
     if request.method == 'POST':
         name_f = request.POST.get('name')
