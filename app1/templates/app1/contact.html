@@ -3,10 +3,11 @@
 {% load static %}
 <br><br>
 <div class="container">
-<div class="row">
-<div class="col-md-9">
-  <h2>Contact Page</h2>
-  <br><br>
+<h4 class="card-title">Contact</h4>
+<br>
+<div style="width:40;">
+  <div class="row">
+<div class="col-sm-6  ">
 <form method="POST" action="{% url 'success' %}">
   {% csrf_token %}
   <div class="form-group">
@@ -24,28 +25,12 @@
    <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 </div>
-<div class="col-md-3">
-  <div class="content-section" style="position:fixed">
-    <br><br><br>
-    <h4>Social Links</h4>
-    <p class='text-muted'>........................................................
-      <ul class="list-group">
-        <a style="text-decoration: none" href="https://github.com/rohangautam09">
-        <li class="list-group-item list-group-item-light">
-          <img src="{% static 'app1/images/github-logo.png' %}" height="20">&emsp;GitHub</li>
-         </a>
-         <a style="text-decoration: none" href="https://www.linkedin.com/in/rohangautam09/">
-         <li class="list-group-item list-group-item-light">
-           <img src="{% static 'app1/images/linkedin.png' %}" height="20">&emsp;LinkedIn</li>
-          </a>
-          <a style="text-decoration: none" href="https://www.instagram.com/rohan_gautam/">
-          <li class="list-group-item list-group-item-light">
-            <img src="{% static 'app1/images/instagram.png' %}" height="20">&emsp;Instagram</li>
-           </a>
-      </ul>
-    </p>
+<div class="col-sm-6">
+<img src="{% static 'app1/images/image1.jpg' %}" height="325">
+
   </div>
-</div>
+
+  </div>
 </div>
 </div>
 {% endblock %}

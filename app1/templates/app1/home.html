@@ -1,36 +1,9 @@
 {% extends 'app1/base.html' %}
 {% block content %}
 {% load static %}
+<br>
+<a href="{% static 'app1/docs/rohangautam.pdf' %}" class="btn btn-primary">Download</a>
 <br><br>
-<div class="container">
-<div class="row">
-<div class="col-md-9">
-  <a style="text-decoration: none" href="{% static 'app1/docs/rohangautam.pdf' %}">Download/Print Resume</a>
-  <br><br>
-  <img src="{% static 'app1/images/page1.jpg' %}">
-</div>
-<div class="col-md-3">
-  <div class="content-section" style="position:fixed">
-    <br><br><br>
-    <h4>Social Links</h4>
-    <p class='text-muted'>........................................................
-      <ul class="list-group">
-        <a style="text-decoration: none" href="https://github.com/rohangautam09">
-        <li class="list-group-item list-group-item-light">
-          <img src="{% static 'app1/images/github-logo.png' %}" height="20">&emsp;GitHub</li>
-         </a>
-         <a style="text-decoration: none" href="https://www.linkedin.com/in/rohangautam09/">
-         <li class="list-group-item list-group-item-light">
-           <img src="{% static 'app1/images/linkedin.png' %}" height="20">&emsp;LinkedIn</li>
-          </a>
-          <a style="text-decoration: none" href="https://www.instagram.com/rohan_gautam/">
-          <li class="list-group-item list-group-item-light">
-            <img src="{% static 'app1/images/instagram.png' %}" height="20">&emsp;Instagram</li>
-           </a>
-      </ul>
-    </p>
-  </div>
-</div>
-</div>
-</div>
+<img src="{% static 'app1/images/page1.jpg' %}" width=100%>
+
 {% endblock %}

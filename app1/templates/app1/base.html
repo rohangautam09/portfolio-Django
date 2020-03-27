@@ -2,6 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="{% static 'app1/style/main.css' %}">
+	<link rel="shortcut icon" href="{% static 'app1/images/rohan.jpg' %}" type="image/x-icon">
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +28,6 @@
 					<a href="{% url 'home' %}" class="nav-item nav-link">Rohan Gautam</a>
 				</div>
 				<div class="navbar-nav ml-auto">
-					<a href="{% static 'app1/docs/rohangautam.pdf' %}" class="nav-item nav-link">Resume</a>
 					<a href="{% url 'portfolio' %}" class="nav-item nav-link">Portfolio</a>
 					<a href="{% url 'certificates' %}" class="nav-item nav-link">Certifications</a>
 					<a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
@@ -34,19 +35,32 @@
 								</div>
 		</div>
 	</nav>
+	<!-- The social media icon bar -->
+
 	<br><br><br>
-<main role="main" class="container">
+	<!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<main  class="container">
+
 
 			{% block content %}
 
 			{% endblock %}
 
 </main>
-<br><br>
+<div class="icon-bar">
+	<a href="https://github.com/rohangautam09" class="github"><i class="fa fa-github"></i></a>
+	<a href="https://www.linkedin.com/in/rohangautam09/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+	<a href="https://www.instagram.com/rohan_gautam/" class="instagram"><i class="fa fa-instagram"></i></a>
+</div>
+<br><br><br><br>
 <footer>
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom" style="min-height: 20px;">
 		<div class="container">
 			<div class="collapse navbar-collapse" id="navbarCollapse">
+	<p class="navbar-nav ml-auto" style="color:white;">© Rohan Gautam {% now "Y"%}</p>
 		</div>
 		</div>
 	</nav>
