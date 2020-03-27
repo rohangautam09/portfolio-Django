@@ -1,0 +1,30 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+<div class="container">
+<br><br><br><br>
+<form method="POST" action="{% url 'certiadded' %}">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input name="name" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Issuing Organization</label>
+    <input name="org" class="form-control" id="exampleFormControlInput1">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Issue Month</label>
+    <input type="date" name="date">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Link</label>
+    <input name="link" class="form-control" id="exampleFormControlInput1">
+  </div>
+<br><br>
+   <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}
