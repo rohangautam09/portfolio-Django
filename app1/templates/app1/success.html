@@ -1,5 +1,7 @@
 {% extends "app1/base.html" %}
 {% block content %}
-<h1>Success page!</h1>
-{{ name }}
+<div class="alert alert-success" role="alert">
+  Thanks {{name}} for reaching out !
+</div>
+<a href="{% url 'home' %}" class="btn btn-primary">Home</a>
 {% endblock %}

@@ -1,4 +1,28 @@
 {% extends 'app1/base.html' %}
 {% block content %}
-<h1>{{name}} certificate added!</h1>
+<div class="alert alert-success" role="alert">
+  {{name}} certificate added!
+</div>
+
+<br><br>
+<a href="{% url 'certificates' %}" class="btn btn-primary">View Certificates</a>
+<br><br>
+
+<div class="row">
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text text-muted">{{org}}</p>
+        <h6 class="card-subtitle mb-2 text-muted">{{date}}</h6>
+        <a href="{{certi.link}}" class="btn btn-primary">View</a>
+      </div>
+    </div>
+<br><br>
+  </div>
+
+
+</div>
+
 {% endblock %}

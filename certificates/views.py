@@ -16,7 +16,7 @@ def certiadded(request):
         link_c = request.POST.get('link')
         c = Certificates(name=name_c,org=org_c,date=date_c,link=link_c)
         c.save()
-        return render(request,'certificates/certiadded.html',{'name':name_c})
+        return render(request,'certificates/certiadded.html',{'name':name_c,'org':org_c,'date':date_c,'link':link_c})
     else:
         return render(request,'certificates/addcerti.html')
 
