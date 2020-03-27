@@ -1,7 +1,7 @@
 {% extends 'app1/base.html' %}
 {% block content %}
 <br><br>
-<a href="{% url 'addcerti' %}" class="btn btn-primary">Add Certificates</a>
+<a href="{% url 'addcerti' %}" class="btn btn-dark">Add Certificates</a>
 <br><br>
 
 <div class="row">
@@ -12,7 +12,7 @@
         <h5 class="card-title">{{certi.name}}</h5>
         <p class="card-text text-muted">{{certi.org}}</p>
         <h6 class="card-subtitle mb-2 text-muted">{{certi.date|date:"F, Y"}}</h6>
-        <a href="{{certi.link}}" class="btn btn-primary">View</a>
+        <a href="{{certi.link}}" class="btn btn-dark">View</a>
       </div>
     </div>
 <br><br>
